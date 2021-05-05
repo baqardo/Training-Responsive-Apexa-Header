@@ -1,5 +1,6 @@
 .navigation {
   position: absolute;
+  z-index: 10;
 
   display: flex;
   align-items: center;
@@ -11,6 +12,10 @@
 }
 
 .navigation__burger {
+  &--green > &-line {
+    background-color: #309e37;
+  }
+
   &-line {
     width: 3rem;
     height: 0.25rem;
@@ -21,10 +26,6 @@
 
     &--short {
       width: 1rem;
-    }
-
-    &--green {
-      background-color: #309e37;
     }
 
     & + & {

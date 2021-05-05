@@ -5,6 +5,28 @@
 
   transform: translateY(-50%);
 
+  &--dark > &__item {
+    background-color: rgba(black, 0.5);
+  }
+  &--dark > &__item--active {
+    background-color: rgba(black, 1);
+
+    &::after {
+      border: 0.125rem solid black;
+    }
+  }
+
+  &--black > &__item {
+    background-color: rgba(black, 0.5);
+  }
+  &--black > &__item--active {
+    background-color: rgba(black, 1);
+
+    &::after {
+      border: 0.125rem solid black;
+    }
+  }
+
   &__item {
     position: relative;
     display: flex;

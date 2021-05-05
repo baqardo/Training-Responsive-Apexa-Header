@@ -7,10 +7,10 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navigation">
-        <a href="#home" className="navigation__burger">
-          <div className="navigation__burger-line navigation__burger-line--green"></div>
-          <div className="navigation__burger-line navigation__burger-line--green navigation__burger-line--short"></div>
-          <div className="navigation__burger-line navigation__burger-line--green"></div>
+        <a href="#home" className="navigation__burger navigation__burger--green">
+          <div className="navigation__burger-line"></div>
+          <div className="navigation__burger-line navigation__burger-line--short"></div>
+          <div className="navigation__burger-line"></div>
         </a>
 
         <a href="#home" className="navigation__login">
