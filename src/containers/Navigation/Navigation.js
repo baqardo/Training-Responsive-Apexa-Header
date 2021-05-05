@@ -1,10 +1,26 @@
 import React, { Component } from "react";
+import ArrowIcon from "../../components/Icons/ArrowIcon";
 
 import "./Navigation.scss";
 
 class Navigation extends Component {
   render() {
-    return <nav className="navigation"></nav>;
+    return (
+      <nav className="navigation">
+        <a href="#home" className="navigation__burger">
+          <div className="navigation__burger-line navigation__burger-line--green"></div>
+          <div className="navigation__burger-line navigation__burger-line--green navigation__burger-line--short"></div>
+          <div className="navigation__burger-line navigation__burger-line--green"></div>
+        </a>
+
+        <a href="#home" className="navigation__login">
+          Login
+          <div className="navigation__login-icon">
+            <ArrowIcon fill="white" size="0.75rem" />
+          </div>
+        </a>
+      </nav>
+    );
   }
 }
 

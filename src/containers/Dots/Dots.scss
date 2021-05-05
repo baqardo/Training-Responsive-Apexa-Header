@@ -1,0 +1,38 @@
+.dots {
+  position: absolute;
+  left: 4rem;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 0.875rem;
+    height: 0.875rem;
+
+    background-color: rgba(black, 0.2);
+    border-radius: 50%;
+
+    &--active {
+      background-color: #309e37;
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.125rem solid #309e37;
+        border-radius: 50%;
+      }
+    }
+
+    & + & {
+      margin-top: 3rem;
+    }
+  }
+}

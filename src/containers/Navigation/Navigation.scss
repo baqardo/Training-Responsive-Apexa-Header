@@ -1,0 +1,53 @@
+.navigation {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 2rem 3rem;
+}
+
+.navigation__burger {
+  &-line {
+    width: 3rem;
+    height: 0.25rem;
+
+    border-radius: 375rem;
+
+    background-color: white;
+
+    &--short {
+      width: 1rem;
+    }
+
+    &--green {
+      background-color: #309e37;
+    }
+
+    & + & {
+      margin-top: 0.375rem;
+    }
+  }
+}
+
+.navigation__login {
+  display: flex;
+  align-items: center;
+
+  margin-right: 4rem;
+
+  font-family: montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4em;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: white;
+
+  &-icon {
+    margin-left: 0.5rem;
+  }
+}
