@@ -1,3 +1,5 @@
+@use '../../styles/animations';
+
 .header2 {
   width: 101vw;
   height: 100vh;
@@ -10,8 +12,16 @@
 
   background-image: url("../../assets/background.png");
   background-size: cover;
-  background-position-x: -10px;
+  background-position-x: -0.5vw;
   background-repeat: no-repeat;
+
+  // &--next {
+  //   animation: slideLeft 1s;
+  // }
+
+  // &--prev {
+  //   animation: slideRight 1s;
+  // }
 
   &__title {
     font-family: montserrat, sans-serif;

@@ -7,7 +7,7 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="navigation">
-        <a href="#home" className="navigation__burger navigation__burger--green">
+        <a href="#home" className={`navigation__burger ${this.props.green ? "navigation__burger--green" : ""}`}>
           <div className="navigation__burger-line"></div>
           <div className="navigation__burger-line navigation__burger-line--short"></div>
           <div className="navigation__burger-line"></div>

@@ -1,3 +1,5 @@
+@use '../../styles/animations';
+
 .header4 {
   position: relative;
   z-index: 0;
@@ -7,6 +9,10 @@
   min-height: 100%;
 
   background-color: #171717;
+
+  // &--next {
+  //   animation: slideLeft 1s;
+  // }
 
   &__title {
     font-family: montserrat, sans-serif;

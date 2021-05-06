@@ -1,0 +1,28 @@
+@keyframes slideLeft {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes extend {
+  from {
+    width: 1rem;
+    height: 1rem;
+  }
+  to {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

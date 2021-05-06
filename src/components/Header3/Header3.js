@@ -1,14 +1,12 @@
 import React from "react";
-import Dots from "../../containers/Dots/Dots";
 import ArrowIcon from "../Icons/ArrowIcon";
 
 import "./Header3.scss";
 
 const Header3 = props => (
-  <header className="header3">
+  <header className={`header3 ${props.direction === "next" ? "header3--next" : "header3--prev"}`}>
     <div className="header3__mask">
       <div className="header3__text">
-        <Dots />
         <div className="header3__panel">
           <div className="header3__panel-subscribe">Subscribe for Update.................</div>
           <a href="#home" className="header3__panel-go">

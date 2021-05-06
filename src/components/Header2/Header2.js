@@ -1,12 +1,10 @@
 import React from "react";
-import Dots from "../../containers/Dots/Dots";
 import ArrowIcon from "../Icons/ArrowIcon";
 
 import "./Header2.scss";
 
 const Header2 = props => (
-  <header className="header2">
-    <Dots />
+  <header className={`header2 ${props.direction === "next" ? "header2--next" : "header2--prev"}`}>
     <div className="header2__content">
       <div className="header2__title">APEXA</div>
       <div className="header2__description">

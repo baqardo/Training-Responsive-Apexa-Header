@@ -1,7 +1,11 @@
+@use "../../styles/animations";
+
 .dots {
   position: absolute;
   left: 4rem;
   top: 50%;
+
+  z-index: 10;
 
   transform: translateY(-50%);
 
@@ -9,7 +13,7 @@
     background-color: rgba(black, 0.5);
   }
   &--dark > &__item--active {
-    background-color: rgba(black, 1);
+    background-color: rgba(black, 0.8);
 
     &::after {
       border: 0.125rem solid black;
@@ -39,6 +43,22 @@
     background-color: rgba(black, 0.2);
     border-radius: 50%;
 
+    transition: all 1.3s;
+
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 3px solid blanchedalmond;
+    }
+
     &--active {
       background-color: #309e37;
 
@@ -50,6 +70,8 @@
         height: 2.5rem;
         border: 0.125rem solid #309e37;
         border-radius: 50%;
+
+        animation: extend 0.5s;
       }
     }
 

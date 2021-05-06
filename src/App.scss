@@ -1,7 +1,48 @@
 .app {
   font-family: acumin-pro, sans-serif;
+  min-height: 100vh;
   // font-family: montserrat, sans-serif;
   // font-weight: 400;
   // font-weight: 600;
   // font-weight: 900;
+
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.slideLeft-appear,
+.slideLeft-enter {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.slideLeft-appear-active,
+.slideLeft-enter.slideLeft-enter-active {
+  top: 0;
+  left: 0;
+  transition: left 1000ms linear;
+}
+
+.slideLeft-enter-done {
+  position: relative;
+}
+// .slideLeft-exit {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+// }
+
+.paragraph {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
 }

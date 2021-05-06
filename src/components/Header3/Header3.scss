@@ -1,10 +1,21 @@
+@use '../../styles/animations';
+
 .header3 {
+  position: relative;
+
   width: 100vw;
   height: 100vh;
   min-height: 100%;
 
   background-image: linear-gradient(270deg, black 50%, transparent 50%),
     radial-gradient(circle, #a2ff00 0%, #518000 100%);
+
+  // &--next {
+  //   animation: slideLeft 1s;
+  // }
+  // &--prev {
+  //   animation: slideRight 1s;
+  // }
 
   &__title {
     font-family: montserrat, sans-serif;
@@ -48,7 +59,7 @@
   }
 
   &__text {
-    margin-left: 1.5rem;
+    margin-left: 1.25rem;
   }
 }
 
