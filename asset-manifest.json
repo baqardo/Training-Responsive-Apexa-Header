@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Training-Responsive-Apexa-Header/static/css/main.b033122e.chunk.css",
+    "main.js": "/Training-Responsive-Apexa-Header/static/js/main.3f9a0c07.chunk.js",
+    "main.js.map": "/Training-Responsive-Apexa-Header/static/js/main.3f9a0c07.chunk.js.map",
+    "runtime-main.js": "/Training-Responsive-Apexa-Header/static/js/runtime-main.b1ccf2b6.js",
+    "runtime-main.js.map": "/Training-Responsive-Apexa-Header/static/js/runtime-main.b1ccf2b6.js.map",
+    "static/js/2.506c83f1.chunk.js": "/Training-Responsive-Apexa-Header/static/js/2.506c83f1.chunk.js",
+    "static/js/2.506c83f1.chunk.js.map": "/Training-Responsive-Apexa-Header/static/js/2.506c83f1.chunk.js.map",
+    "static/js/3.d6038d6c.chunk.js": "/Training-Responsive-Apexa-Header/static/js/3.d6038d6c.chunk.js",
+    "static/js/3.d6038d6c.chunk.js.map": "/Training-Responsive-Apexa-Header/static/js/3.d6038d6c.chunk.js.map",
+    "index.html": "/Training-Responsive-Apexa-Header/index.html",
+    "static/css/main.b033122e.chunk.css.map": "/Training-Responsive-Apexa-Header/static/css/main.b033122e.chunk.css.map",
+    "static/js/2.506c83f1.chunk.js.LICENSE.txt": "/Training-Responsive-Apexa-Header/static/js/2.506c83f1.chunk.js.LICENSE.txt",
+    "static/media/Header2.scss": "/Training-Responsive-Apexa-Header/static/media/background.6290129c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b1ccf2b6.js",
+    "static/js/2.506c83f1.chunk.js",
+    "static/css/main.b033122e.chunk.css",
+    "static/js/main.3f9a0c07.chunk.js"
+  ]
+}
