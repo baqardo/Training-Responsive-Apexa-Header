@@ -15,13 +15,11 @@
   background-position-x: -0.5vw;
   background-repeat: no-repeat;
 
-  // &--next {
-  //   animation: slideLeft 1s;
-  // }
-
-  // &--prev {
-  //   animation: slideRight 1s;
-  // }
+  &__content {
+    @media screen and (max-width: 960px) {
+      text-align: center;
+    }
+  }
 
   &__title {
     font-family: montserrat, sans-serif;
@@ -29,6 +27,16 @@
     font-weight: 900;
     color: white;
     line-height: 1em;
+
+    @media screen and (max-width: 960px) {
+      font-size: 12rem;
+
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 10rem;
+    }
   }
 
   &__description {
@@ -43,6 +51,11 @@
 
     &--right {
       color: white;
+    }
+
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
     }
   }
 

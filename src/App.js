@@ -17,39 +17,60 @@ class App extends Component {
     super(props);
 
     this.animationEnd = true;
+    this.startTouchPos = null;
   }
 
   state = { position: 1, direction: null };
 
   componentDidMount() {
     window.addEventListener("wheel", this.handleScroll);
+    window.addEventListener("touchstart", this.handleTouchStart);
+    window.addEventListener("touchend", this.handleTouchEnd);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextState.position, this.state.position);
     if (nextState.position === this.state.position) return false;
     return true;
   }
 
   componentWillUnmount() {
     window.removeEventListener("wheel", this.handleScroll);
+    window.removeEventListener("touchstart", this.handleTouchStart);
+    window.removeEventListener("touchend", this.handleTouchEnd);
   }
+
+  handleTouchStart = event => {
+    this.startTouchPos = event.touches[0].clientX;
+  };
+
+  handleTouchEnd = event => {
+    let endTouchPos = event.changedTouches[0].clientX;
+
+    let diffTouchPos = Math.abs(this.startTouchPos - endTouchPos);
+
+    if (this.startTouchPos > endTouchPos && diffTouchPos > 20) {
+      this.changePosition(this.state.position + 1);
+    }
+
+    if (this.startTouchPos < endTouchPos && diffTouchPos > 20) {
+      this.changePosition(this.state.position - 1);
+    }
+  };
 
   handleScroll = event => {
     if (event.deltaY < 0) {
-      if (this.state.position > 1) {
-        this.changePosition(this.state.position - 1);
-      }
+      this.changePosition(this.state.position - 1);
     }
     if (event.deltaY > 0) {
-      if (this.state.position < 4) {
-        this.changePosition(this.state.position + 1);
-      }
+      this.changePosition(this.state.position + 1);
     }
   };
 
   changePosition = position => {
     if (!this.animationEnd) return;
+
+    if (position < 1 || position > 4) return;
+
     let direction = null;
     if (position === this.state.position) return;
     if (position > this.state.position) direction = "next";
@@ -70,33 +91,35 @@ class App extends Component {
         <Dots position={this.state.position} click={this.changePosition} />
 
         <Route
-          render={({ location }) => (
-            <SwitchTransition mode={"in-out"}>
-              <CSSTransition
-                nodeRef={this.nodeRef}
-                key={location.key}
-                timeout={1000}
-                classNames="slideLeft"
-                exit={false}>
-                <div ref={this.nodeRef}>
-                  <Switch location={location}>
-                    <Route exact path="/header2">
-                      <Header2 direction={this.state.direction} />
-                    </Route>
-                    <Route exact path="/header3">
-                      <Header3 direction={this.state.direction} />
-                    </Route>
-                    <Route exact path="/header4">
-                      <Header4 direction={this.state.direction} />
-                    </Route>
-                    <Route path="/">
-                      <Header1 direction={this.state.direction} />
-                    </Route>
-                  </Switch>
-                </div>
-              </CSSTransition>
-            </SwitchTransition>
-          )}
+          render={({ location }) => {
+            return (
+              <SwitchTransition mode={"in-out"}>
+                <CSSTransition
+                  nodeRef={this.nodeRef}
+                  key={location.pathname}
+                  timeout={1000}
+                  classNames={`${this.state.direction === "next" ? "slideLeft" : "slideRight"}`}
+                  exit={false}>
+                  <div ref={this.nodeRef}>
+                    <Switch location={location}>
+                      <Route exact path="/header2">
+                        <Header2 />
+                      </Route>
+                      <Route exact path="/header3">
+                        <Header3 />
+                      </Route>
+                      <Route exact path="/header4">
+                        <Header4 />
+                      </Route>
+                      <Route path="/">
+                        <Header1 />
+                      </Route>
+                    </Switch>
+                  </div>
+                </CSSTransition>
+              </SwitchTransition>
+            );
+          }}
         />
       </div>
     );

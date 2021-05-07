@@ -10,19 +10,22 @@
   background-image: linear-gradient(270deg, black 50%, transparent 50%),
     radial-gradient(circle, #a2ff00 0%, #518000 100%);
 
-  // &--next {
-  //   animation: slideLeft 1s;
-  // }
-  // &--prev {
-  //   animation: slideRight 1s;
-  // }
-
   &__title {
     font-family: montserrat, sans-serif;
     font-size: 16rem;
     font-weight: 900;
     color: transparent;
     line-height: 1em;
+
+    @media screen and (max-width: 960px) {
+      font-size: 12rem;
+
+      margin-left: 1rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 10rem;
+    }
   }
 
   &__mask {
@@ -56,10 +59,21 @@
     &--right {
       color: white;
     }
+
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
   }
 
   &__text {
     margin-left: 1.25rem;
+
+    @media screen and(max-width: 960px) {
+      margin-left: 0;
+
+      text-align: center;
+    }
   }
 }
 
@@ -73,6 +87,14 @@
 
   height: 6rem;
   width: 50%;
+
+  @media screen and (max-width: 960px) {
+    height: 4rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 
   &-subscribe {
     display: flex;
@@ -92,6 +114,13 @@
     line-height: 1.4em;
     color: black;
     letter-spacing: 0.125rem;
+
+    @media screen and (max-width: 960px) {
+      padding-left: 1rem;
+      width: 87%;
+
+      font-size: 1.375rem;
+    }
   }
 
   &-go {
@@ -108,5 +137,15 @@
     background-color: rgba(black, 0.4);
 
     margin-left: 1.5%;
+
+    font-size: 1.25rem;
+
+    @media screen and (max-width: 960px) {
+      min-width: initial;
+      width: 12%;
+      margin-left: 1%;
+
+      font-size: 0.75rem;
+    }
   }
 }

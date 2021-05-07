@@ -1,22 +1,12 @@
-.app {
-  font-family: acumin-pro, sans-serif;
-  min-height: 100vh;
-  // font-family: montserrat, sans-serif;
-  // font-weight: 400;
-  // font-weight: 600;
-  // font-weight: 900;
-
+.root {
   overflow: hidden;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+.app {
+  font-family: acumin-pro, sans-serif;
+  min-height: 100vh;
 
-  100% {
-    opacity: 1;
-  }
+  overflow: hidden;
 }
 
 .slideLeft-appear,
@@ -35,11 +25,23 @@
 .slideLeft-enter-done {
   position: relative;
 }
-// .slideLeft-exit {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-// }
+
+.slideRight-appear,
+.slideRight-enter {
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+.slideRight-appear-active,
+.slideRight-enter.slideRight-enter-active {
+  top: 0;
+  left: 0;
+  transition: left 1000ms linear;
+}
+
+.slideRight-enter-done {
+  position: relative;
+}
 
 .paragraph {
   position: absolute;

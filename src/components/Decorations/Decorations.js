@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Decorations = props => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="1104.564" height="371.33" viewBox="0 0 1104.564 371.33">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={`${props.size ? props.size : "69rem"}`}
+    height="371.33"
+    viewBox="0 0 1104.564 371.33">
     <g id="Group_25" data-name="Group 25" transform="translate(-524.313 -4028.102)">
       <g id="Group_17" data-name="Group 17" transform="translate(1327.657 4039.677)">
         <path
@@ -339,4 +343,4 @@ const Decorations = props => (
   </svg>
 );
 
-export default Decorations
+export default Decorations;

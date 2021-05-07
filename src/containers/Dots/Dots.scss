@@ -9,6 +9,14 @@
 
   transform: translateY(-50%);
 
+  @media screen and (max-width: 960px) {
+    left: 2rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+
   &--dark > &__item {
     background-color: rgba(black, 0.5);
   }

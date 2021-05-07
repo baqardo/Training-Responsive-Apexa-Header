@@ -5,7 +5,7 @@ import Decorations from "../Decorations/Decorations";
 import "./Header4.scss";
 
 const Header4 = props => (
-  <header className={`header4 ${props.direction === "next" ? "header4--next" : ""}`}>
+  <header className={`header4`}>
     <div className="header4__mask">
       <div className="header4__text">
         <div className="header4__panel">
@@ -18,7 +18,7 @@ const Header4 = props => (
         <div className="header4__title">APEXA</div>
         <div className="header4__description">Design to build World of peace</div>
         <div className="header4__decorations">
-          <Decorations />
+          <Decorations size="69em" />
         </div>
       </div>
     </div>
