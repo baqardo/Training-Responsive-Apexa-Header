@@ -9,7 +9,6 @@ import Header4 from "./components/Header4/Header4";
 
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import { Switch, Route } from "react-router-dom";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 class App extends Component {
@@ -77,7 +76,6 @@ class App extends Component {
     if (position < this.state.position) direction = "prev";
     this.animationEnd = false;
     this.setState({ position, direction });
-    this.props.history.push({ pathname: `header${position}` });
     setTimeout(() => {
       this.animationEnd = true;
     }, 1000);
@@ -85,12 +83,42 @@ class App extends Component {
 
   render() {
     this.nodeRef = React.createRef();
+    let header = null;
+
+    switch (this.state.position) {
+      case 1:
+        header = <Header1 />;
+        break;
+      case 2:
+        header = <Header2 />;
+        break;
+      case 3:
+        header = <Header3 />;
+        break;
+      case 4:
+        header = <Header4 />;
+        break;
+      default:
+        header = <Header1 />;
+    }
+
     return (
       <div className="app">
         <Navigation green={this.state.position === 1 ? true : false} />
         <Dots position={this.state.position} click={this.changePosition} />
 
-        <Route
+        <SwitchTransition mode={"in-out"}>
+          <CSSTransition
+            nodeRef={this.nodeRef}
+            key={this.state.position}
+            timeout={1000}
+            classNames={`${this.state.direction === "next" ? "slideLeft" : "slideRight"}`}
+            exit={false}>
+            <div ref={this.nodeRef}>{header}</div>
+          </CSSTransition>
+        </SwitchTransition>
+
+        {/* <Route
           render={({ location }) => {
             return (
               <SwitchTransition mode={"in-out"}>
@@ -120,7 +148,7 @@ class App extends Component {
               </SwitchTransition>
             );
           }}
-        />
+        /> */}
       </div>
     );
   }
