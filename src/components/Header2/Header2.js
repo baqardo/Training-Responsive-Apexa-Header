@@ -12,8 +12,8 @@ const Header2 = props => (
         <span className="header2__description--right">World of peace</span>
       </div>
       <div className="header2__subscription">
-        <div className="header2__subscription-text">Subscribe for Update.................</div>
-        <a href="#home" className="header2__subscription-btn">
+        <div className="header2__subscription-text">Designed by JITU RAUT</div>
+        <a href="https://dribbble.com/jituraut" target="_blank" className="header2__subscription-btn">
           <ArrowIcon fill="white" size="1.25rem" />
         </a>
       </div>

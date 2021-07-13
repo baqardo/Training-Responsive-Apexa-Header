@@ -8,8 +8,8 @@ const Header1 = props => (
     <div className="header1__mask">
       <div className="header1__text">
         <div className="header1__panel">
-          <div className="header1__panel-subscribe">Subscribe for Update..............</div>
-          <a href="#home" className="header1__panel-go">
+          <div className="header1__panel-subscribe">Designed by JITU RAUT</div>
+          <a href="https://dribbble.com/jituraut" target="_blank" className="header1__panel-go">
             <ArrowIcon fill="#038336" size="1.25em" />
           </a>
         </div>
